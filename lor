@@ -1,0 +1,39 @@
+[31mF[0m[31mF[0m[31mF[0m[31mF[0m
+
+Failures:
+
+  1) MyEnumerable my_each goes through each element and performs the block of code
+     [31mFailure/Error: arr.my_each { |x| output << x + 20 }[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `each' for 4:Fixnum[0m
+     [36m# ./my_enumerable.rb:3:in `my_each'[0m
+     [36m# ./my_enumerable_spec.rb:12:in `block (3 levels) in <top (required)>'[0m
+
+  2) MyEnumerable my_select returns new array that meets condition
+     [31mFailure/Error: output = arr.my_select { |x| x > 10 }[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `my_select' for [12, 24, 8, 9]:Array[0m
+     [36m# ./my_enumerable_spec.rb:20:in `block (3 levels) in <top (required)>'[0m
+
+  3) MyEnumerable my_reject returns new array that didn't meet specified condition
+     [31mFailure/Error: output = arr.my_reject { |x| x > 10 }[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `my_reject' for [12, 24, 8, 9]:Array[0m
+     [36m# ./my_enumerable_spec.rb:28:in `block (3 levels) in <top (required)>'[0m
+
+  4) MyEnumerable my_map returns new array with each element modified by block
+     [31mFailure/Error: output = arr.my_map { |num| num * 2 }[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `my_map' for [1, 2, 3]:Array[0m
+     [36m# ./my_enumerable_spec.rb:36:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.00105 seconds (files took 0.08527 seconds to load)
+[31m4 examples, 4 failures[0m
+
+Failed examples:
+
+[31mrspec ./my_enumerable_spec.rb:9[0m [36m# MyEnumerable my_each goes through each element and performs the block of code[0m
+[31mrspec ./my_enumerable_spec.rb:18[0m [36m# MyEnumerable my_select returns new array that meets condition[0m
+[31mrspec ./my_enumerable_spec.rb:26[0m [36m# MyEnumerable my_reject returns new array that didn't meet specified condition[0m
+[31mrspec ./my_enumerable_spec.rb:34[0m [36m# MyEnumerable my_map returns new array with each element modified by block[0m
+
